@@ -1,0 +1,61 @@
+<%- include('partials/header');-%>
+
+    <header>
+        <div class="row mx-auto my-5">
+            <div class="col-md-8 mx-auto">
+                <!-- card start -->
+                <div class="card shadow">
+                    <div class="card-body p-5">
+                        <div class="row">
+                            <div class="col-md-6 my-5">
+                                <img class="img-fluid" src="./img/forgot_password.svg" alt="Forgot Password">
+                            </div>
+                            <div class="col-md-6 ">
+                                <h1 class="font-weight-bold">Forget Password!</h1>
+                                <% if(typeof alert !='undefined' ) { %>
+                                    <% alert.forEach(function(error) { %>
+                                        <div class="alert my-3 alert-warning alert-dismissible fade show" role="alert">
+                                            <%= error.msg %>
+                                                <button type="button" class="close" data-dismiss="alert"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                        </div>
+                                        <% }) %>
+                                            <% } %>
+                                                <form action="/forgot" method="POST">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">UserName</label>
+                                                        <input type="text" name="userName" class="form-control"
+                                                            placeholder="Enter Your userName">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Current Password</label>
+                                                        <input type="password" name="password" class="form-control"
+                                                            placeholder="Enter Your Password">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>New Password</label>
+                                                        <input type="password" name="UpdateCurrentPassword"
+                                                            class="form-control" placeholder="Enter Your New Password">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Retype New Password</label>
+                                                        <input type="password" name="UpdateReTypeCurrentPassword"
+                                                            class="form-control"
+                                                            placeholder="Re-Enter Your New Password">
+                                                    </div>
+                                                    <button type="submit"
+                                                        class="btn btn-outline-primary btn-block rounded">Submit</button>
+
+                                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Card End-->
+            </div>
+        </div>
+    </header>
+
+    <%- include('partials/footer');-%>

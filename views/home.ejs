@@ -1,0 +1,42 @@
+<%- include('partials/header');-%>
+    <div class="container-fluid">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/">Food Recipe</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <% if (isLogin && isPage) { %>
+                                <a class="nav-link" href="/logOut">LogOut<span class="sr-only">(current)</span></a>
+                                <%} else { %>
+                                    <a class="nav-link" href="/login">Login<span class="sr-only">(current)</span></a>
+                                    <% } %>
+
+
+                        </li>
+                    </ul>
+                </div>
+            </nav><!-- navbar end -->
+        </div>
+    </div>
+
+    <header>
+        <div class="row mx-auto my-5">
+            <div class="col-md-6">
+                <img class="img-fluid" src="./img/eating_together.png" alt="Eating Together">
+            </div>
+            <div class="col-md-6 mx-auto mt-5">
+                <h1>Dilkash Food Recipe</h1>
+                <h3>By Dilkash Shaikh Mahajan</h3>
+                <a href="/receipes" class="mt-5 btn btn-outline-info">View Recipe</a>
+            </div>
+        </div>
+    </header>
+
+    <%- include('partials/footer');-%>

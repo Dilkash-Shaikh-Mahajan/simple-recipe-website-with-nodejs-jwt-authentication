@@ -1,0 +1,39 @@
+{
+  "name": "dilkash-food-receipe-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js -e js,ejs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dilkash-Shaikh-Mahajan/dilkash-food-receipe-app.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "mern",
+    "stack"
+  ],
+  "author": "Dilkash Shaikh Mahajan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dilkash-Shaikh-Mahajan/dilkash-food-receipe-app/issues"
+  },
+  "homepage": "https://github.com/Dilkash-Shaikh-Mahajan/dilkash-food-receipe-app#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.9.2",
+    "hbs": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.8",
+    "sweetalert": "^2.1.2"
+  }
+}
